@@ -13,7 +13,8 @@
     "chess.js": "^1.4.0",
     "react": "^19.2.6",
     "react-chessboard": "^4.7.3",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "stockfish.js": "^10.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
