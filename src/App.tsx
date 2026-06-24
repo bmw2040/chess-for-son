@@ -6,9 +6,9 @@ import { Chessboard } from "react-chessboard";
 export default function App() {
   const [game, setGame] = useState(() => new Chess());
   const [history, setHistory] = useState<string[]>([]);
-  const [moves, setMoves] = useState<string[]>([]);
-  const [aiElo, setAiElo] = useState(600);
-  const [aiThinking, setAiThinking] =  useState(false);
+const [moves, setMoves] = useState<string[]>([]);
+const [aiElo, setAiElo] = useState(600);
+const [aiThinking, setAiThinking] = useState(false);
   const engineRef = useRef<Worker | null>(null);
   const pendingGameRef = useRef<Chess | null>(null);
 
@@ -56,8 +56,8 @@ worker.onmessage = (event) => {
     );
 
 const result = gameCopy.move({
-  from: moveStr.substring(0, 2),
-  to: moveStr.substring(2, 4),
+  from: moveStr.substring(0, 2) as any,
+  to: moveStr.substring(2, 4) as any,
   promotion: "q",
 });
 console.log("MOVE RESULT =", result);
