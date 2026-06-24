@@ -88,7 +88,7 @@ setAiThinking(false);
   function showMoveOptions(square: string) {
     try {
       const moves = game.moves({
-        square,
+         square: square as any,
         verbose: true,
       });
 
